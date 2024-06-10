@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\BrandController as AdminBrandController;
 use App\Http\Controllers\Admin\TypeController as AdminTypeController;
 use App\Http\Controllers\Admin\ItemController as AdminItemController;
 use App\Http\Controllers\Admin\BookingController as AdminBookingController;
+use App\Http\Controllers\Front\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,8 @@ use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::name('front.')->group(function () {
+    Route::get('/', [LandingController::class, 'index'])->name('index');
 });
 
 Route::prefix('admin')->name('admin.')->middleware([
