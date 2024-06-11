@@ -85,13 +85,25 @@
                   <div class="w-full max-w-[70%]">
                     <!-- Button Primary -->
                     <div class="p-1 rounded-full bg-primary group">
-                      {{-- <a href="{{ route('front.checkout', $item->slug) }}" class="btn-primary"> --}}
+                        <a href="#!" class="btn-primary">
+                        <a href="{{ route('front.checkout', $item->slug) }}" class="btn-primary">
+                          <p class="transition-all duration-[320ms] translate-x-3 group-hover:-translate-x-1">
+                            Rent Now
+                          </p>
+                          <img src="/svgs/ic-arrow-right.svg"
+                               class="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-[320ms]"
+                               alt="">
+                        </a>
+                    </div>
+
+                    {{-- <div class="p-1 rounded-full bg-primary group">
+                      <a href="{{ route('front.checkout', $item->slug) }}" class="btn-primary">
                         <p>
                           Rent Now
                         </p>
                         <img src="/svgs/ic-arrow-right.svg" alt="">
                       </a>
-                    </div>
+                    </div> --}}
                   </div>
                 </div>
               </div>
